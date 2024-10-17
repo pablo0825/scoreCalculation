@@ -35,12 +35,12 @@ body {
     section.animation {
       margin-top: 10vh;
       height: 80vh;
-      border: 5px solid red;
+      //border: 5px solid red;
       display: flex;
       justify-content: center;
       align-items: center;
       .hero {
-        border: 5px solid green;
+        //border: 5px solid green;
         width: 100%;
         height: 0;
         img {
@@ -56,7 +56,7 @@ body {
       left: 0;
       width: 100%;
       height: 100vh;
-      background-color: linear-gradient(to right, rgb(144, 144, 144), black);
+      background: linear-gradient(to right, rgb(144, 144, 144), rgb(0, 0, 0));
       z-index: -1;
     }
   }
@@ -149,6 +149,29 @@ body {
         }
       }
     }
+  }
+}
+
+.remove {
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
   }
 }
 
